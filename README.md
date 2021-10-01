@@ -39,3 +39,5 @@ $ rails s
 ![画面遷移図](https://user-images.githubusercontent.com/86047519/135594035-d5763866-9ed5-4f49-823c-feb87e861ad0.png)
 
 ## [ワイヤーフレーム](https://drive.google.com/file/d/1Rp8HzaNKJw9ulvwXYprJ-OkHi9UNp6z7/view?usp=sharing)
+
+## [チェックシート](https://docs.google.com/spreadsheets/d/10eXXwHCWdnWKj7X61ogy6BLGH-UMekSMCoHY6J0hc9E/edit?usp=sharing)
