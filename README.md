@@ -36,7 +36,7 @@ $ rails s
 ![ER図](https://user-images.githubusercontent.com/86047519/135742538-a359fe38-5f2d-4ae7-993d-e8d07ddf0ff8.png)
 
 ## [画面遷移図](https://drive.google.com/file/d/1u08J_QZUoZMMiaXEcWcAvdSkOKgFePB7/view?usp=sharing)
-![画面遷移図](https://user-images.githubusercontent.com/86047519/135742564-9cfeea68-5ede-4d5a-ba84-82b8a060055b.png)
+![画面遷移図](https://user-images.githubusercontent.com/86047519/135753866-21c7f51c-bfa2-4d43-8baa-0056a39b5716.png)
 
 ## [ワイヤーフレーム](https://drive.google.com/file/d/1Rp8HzaNKJw9ulvwXYprJ-OkHi9UNp6z7/view?usp=sharing)
 
