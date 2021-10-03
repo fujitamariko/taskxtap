@@ -33,10 +33,10 @@ $ rails s
 ## [テーブル定義書](https://docs.google.com/spreadsheets/d/12vlXBfIvhuU_8V--iqikjBjif0uSV-u-geRvKNhORDA/edit?usp=sharing)
 
 ## [ER図](https://drive.google.com/file/d/1TGcJgC1_pXULssT1MdLPnq3gW9Pifkv0/view?usp=sharing)
-![ER図](https://user-images.githubusercontent.com/86047519/135593809-8a9ade8c-168a-4c55-93df-59855a1eb69f.png)
+![ER図](https://user-images.githubusercontent.com/86047519/135742538-a359fe38-5f2d-4ae7-993d-e8d07ddf0ff8.png)
 
-## 画面遷移図(https://drive.google.com/file/d/1u08J_QZUoZMMiaXEcWcAvdSkOKgFePB7/view?usp=sharing)
-![画面遷移図](https://user-images.githubusercontent.com/86047519/135594035-d5763866-9ed5-4f49-823c-feb87e861ad0.png)
+## [画面遷移図](https://drive.google.com/file/d/1u08J_QZUoZMMiaXEcWcAvdSkOKgFePB7/view?usp=sharing)
+![画面遷移図](https://user-images.githubusercontent.com/86047519/135742564-9cfeea68-5ede-4d5a-ba84-82b8a060055b.png)
 
 ## [ワイヤーフレーム](https://drive.google.com/file/d/1Rp8HzaNKJw9ulvwXYprJ-OkHi9UNp6z7/view?usp=sharing)
 
