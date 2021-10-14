@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assortment:</strong>
+  <%= @task.assortment %>
+</p>
+
+<p>
+  <strong>Major category:</strong>
+  <%= @task.major_category %>
+</p>
+
+<p>
+  <strong>Medium category:</strong>
+  <%= @task.medium_category %>
+</p>
+
+<p>
+  <strong>Sub category:</strong>
+  <%= @task.sub_category %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @task.content %>
+</p>
+
+<p>
+  <strong>Plan hours:</strong>
+  <%= @task.plan_hours %>
+</p>
+
+<p>
+  <strong>Spend hours:</strong>
+  <%= @task.spend_hours %>
+</p>
+
+<p>
+  <strong>Deadline on:</strong>
+  <%= @task.deadline_on %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

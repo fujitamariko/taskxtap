@@ -1,0 +1,45 @@
+<% if current_user.try(:admin?) %>
+  <h1>Tasks_admin</h1>
+<% else %>
+  <h1>Tasks</h1>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assortment</th>
+      <th>Major category</th>
+      <th>Medium category</th>
+      <th>Sub category</th>
+      <th>Content</th>
+      <th>Plan hours</th>
+      <th>Spend hours</th>
+      <th>Deadline on</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.assortment %></td>
+        <td><%= task.major_category %></td>
+        <td><%= task.medium_category %></td>
+        <td><%= task.sub_category %></td>
+        <td><%= task.content %></td>
+        <td><%= task.plan_hours %></td>
+        <td><%= task.spend_hours %></td>
+        <td><%= task.deadline_on %></td>
+        <td><%= task.status %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>

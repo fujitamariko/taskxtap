@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_12_075137) do
+ActiveRecord::Schema.define(version: 2021_10_14_055412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "assortment", null: false
+    t.string "major_category", null: false
+    t.string "medium_category", null: false
+    t.string "sub_category", null: false
+    t.text "content", null: false
+    t.decimal "plan_hours", precision: 5, scale: 2, null: false
+    t.decimal "spend_hours", precision: 5, scale: 2
+    t.date "deadline_on", null: false
+    t.integer "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
