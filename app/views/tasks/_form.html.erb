@@ -1,0 +1,62 @@
+<%= form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :assortment %>
+    <%= form.text_field :assortment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :major_category %>
+    <%= form.text_field :major_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medium_category %>
+    <%= form.text_field :medium_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_category %>
+    <%= form.text_field :sub_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plan_hours %>
+    <%= form.text_field :plan_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spend_hours %>
+    <%= form.text_field :spend_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline_on %>
+    <%= form.date_select :deadline_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

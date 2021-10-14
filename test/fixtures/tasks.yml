@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assortment: MyString
+  major_category: MyString
+  medium_category: MyString
+  sub_category: MyString
+  content: MyText
+  plan_hours: 9.99
+  spend_hours: 9.99
+  deadline_on: 2021-10-14
+  status: 1
+
+two:
+  assortment: MyString
+  major_category: MyString
+  medium_category: MyString
+  sub_category: MyString
+  content: MyText
+  plan_hours: 9.99
+  spend_hours: 9.99
+  deadline_on: 2021-10-14
+  status: 1
