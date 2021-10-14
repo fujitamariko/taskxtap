@@ -41,3 +41,6 @@ gem 'dotenv-rails'
 
 gem 'devise'
 gem 'devise-i18n'
+
+gem 'rails_admin', '~> 2.0'
+gem 'cancancan'
