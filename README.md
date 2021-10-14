@@ -38,7 +38,7 @@ $ rails s
 ## [テーブル定義書](https://docs.google.com/spreadsheets/d/12vlXBfIvhuU_8V--iqikjBjif0uSV-u-geRvKNhORDA/edit?usp=sharing)
 
 ## [ER図](https://drive.google.com/file/d/1TGcJgC1_pXULssT1MdLPnq3gW9Pifkv0/view?usp=sharing)
-![ER図](https://user-images.githubusercontent.com/86047519/135742538-a359fe38-5f2d-4ae7-993d-e8d07ddf0ff8.png)
+![ER図](https://user-images.githubusercontent.com/86047519/136916595-915036c1-bca4-4e95-9e34-97f1606e4f64.png)
 
 ## [画面遷移図](https://drive.google.com/file/d/1u08J_QZUoZMMiaXEcWcAvdSkOKgFePB7/view?usp=sharing)
 ![画面遷移図](https://user-images.githubusercontent.com/86047519/135753866-21c7f51c-bfa2-4d43-8baa-0056a39b5716.png)
