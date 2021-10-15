@@ -1,52 +1,52 @@
-<p id="notice"><%= notice %></p>
+<h1>タスク詳細</h1>
 
 <p>
-  <strong>Assortment:</strong>
+  <strong>種類:</strong>
   <%= @task.assortment %>
 </p>
 
 <p>
-  <strong>Major category:</strong>
+  <strong>大分類:</strong>
   <%= @task.major_category %>
 </p>
 
 <p>
-  <strong>Medium category:</strong>
+  <strong>中分類:</strong>
   <%= @task.medium_category %>
 </p>
 
 <p>
-  <strong>Sub category:</strong>
+  <strong>小分類:</strong>
   <%= @task.sub_category %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>内容:</strong>
   <%= @task.content %>
 </p>
 
 <p>
-  <strong>Plan hours:</strong>
+  <strong>予定工数:</strong>
   <%= @task.plan_hours %>
 </p>
 
 <p>
-  <strong>Spend hours:</strong>
+  <strong>実工数:</strong>
   <%= @task.spend_hours %>
 </p>
 
 <p>
-  <strong>Deadline on:</strong>
+  <strong>締め切り:</strong>
   <%= @task.deadline_on %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>ステータス:</strong>
   <%= @task.status %>
 </p>
 
 <p>
-  <strong>Label:</strong>
+  <strong>ラベル:</strong>
   <% @task.labels.each do |label| %>
     <%= label.name %>
   <% end %>

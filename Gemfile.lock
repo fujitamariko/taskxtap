@@ -301,6 +301,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   jbuilder (~> 2.5)
+  kaminari
   letter_opener_web
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
