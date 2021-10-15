@@ -4,9 +4,9 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = current_user.tasks.all
+    @tasks = current_user.tasks.all.page(params[:page]).per(5)
     @q = @tasks.ransack(params[:q])
-    @tasks = @q.result.includes(:user).page(params[:page]).order("created_at desc")
+    @tasks = @q.result.includes(:user).page(params[:page]).order("deadline_on asc").per(5)
     @tasks = @tasks.joins(:labels).where(labels: { id: params[:label_id] }) if params[:label_id].present?
   end
 
