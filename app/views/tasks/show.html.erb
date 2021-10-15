@@ -52,5 +52,14 @@
   <% end %>
 </p>
 
+  <p>コメント</p>
+  <!-- このcomments_areaというHTMLのidを取得して、そのdivの部分だけを更新する -->
+  <div id="comments_area">
+    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, task: @task } %>
+  </div>
+  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, task: @task } %>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
