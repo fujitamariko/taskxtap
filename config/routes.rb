@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   resources :tasks do
     resources :comments
   end
+  resources :tasks do
+    collection do
+      get 'search'
+    end
+  end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
