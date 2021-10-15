@@ -6,4 +6,16 @@ class User < ApplicationRecord
 
   has_many :tasks, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  def self.guest
+    find_or_create_by!(name: 'ゲスト', email: 'guest@example.com') do |user|
+      user.password = SecureRandom.alphanumeric()
+    end
+  end
+
+  def self.admin_guest
+    find_or_create_by!(name: '管理者ゲスト', email: 'admin_guest@example.com', admin: true) do |user|
+      user.password = SecureRandom.alphanumeric()
+    end
+  end
 end
