@@ -12,52 +12,52 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :assortment %>
+    <%= form.label :種類 %>
     <%= form.text_field :assortment %>
   </div>
 
   <div class="field">
-    <%= form.label :major_category %>
+    <%= form.label :大分類 %>
     <%= form.text_field :major_category %>
   </div>
 
   <div class="field">
-    <%= form.label :medium_category %>
+    <%= form.label :中分類 %>
     <%= form.text_field :medium_category %>
   </div>
 
   <div class="field">
-    <%= form.label :sub_category %>
+    <%= form.label :小分類 %>
     <%= form.text_field :sub_category %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :内容 %>
     <%= form.text_area :content %>
   </div>
 
   <div class="field">
-    <%= form.label :plan_hours %>
+    <%= form.label :予定工数 %>
     <%= form.text_field :plan_hours %>
   </div>
 
   <div class="field">
-    <%= form.label :spend_hours %>
+    <%= form.label :実工数 %>
     <%= form.text_field :spend_hours %>
   </div>
 
   <div class="field">
-    <%= form.label :deadline_on %>
+    <%= form.label :締め切り %>
     <%= form.date_select :deadline_on %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
+    <%= form.label :ステータス %>
     <%= form.select :status, Task.statuses.keys.to_a, {}  %>
   </div>
 
   <div class="field">
-    <%= form.label :label %>
+    <%= form.label :ラベル %>
     <%= form.collection_check_boxes(:label_ids, Label.all, :id, :name) %>
   </div>
 

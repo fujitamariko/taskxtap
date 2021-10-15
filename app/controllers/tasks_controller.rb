@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.build(task_params)
     if @task.save
-      redirect_to tasks_path, notice: "Task was successfully created!"
+      redirect_to tasks_path, notice: "タスクが登録されました"
     else
       render :new
     end
@@ -39,7 +39,7 @@ end
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: "Task was successfully updated." }
+        format.html { redirect_to @task, notice: "タスクが更新されました" }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ end
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
+      format.html { redirect_to tasks_url, notice: "タスクが削除されました" }
       format.json { head :no_content }
     end
   end
