@@ -34,23 +34,23 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.build(task_params)
+    @task.plan_hours += params[:plan_hours].to_f
+    @task.spend_hours += params[:spend_hours].to_f
     if @task.save
       redirect_to tasks_path, notice: "タスクが登録されました"
     else
       render :new
     end
-end
+  end
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
-    respond_to do |format|
-      if @task.update(task_params)
-        format.html { redirect_to @task, notice: "タスクが更新されました" }
-        format.json { render :show, status: :ok, location: @task }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
+    # @task.plan_hours += params[:plan_hours].to_f
+    # @task.spend_hours += params[:spend_hours].to_f
+    if @task.update(task_params)
+      redirect_to tasks_path, notice: "タスクが更新されました"
+    else
+      render :edit
     end
   end
 
