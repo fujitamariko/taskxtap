@@ -14,6 +14,9 @@ class TasksController < ApplicationController
   def show
     @comments = @task.comments
     @comment = @task.comments.build
+    unless @task.user_id == current_user.id
+      redirect_to tasks_path, notice: '他の人のページへアクセスは出来ません'
+    end
   end
 
   # GET /tasks/new
@@ -23,6 +26,9 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    unless @task.user_id == current_user.id
+      redirect_to tasks_path, notice: '他の人のページへアクセスは出来ません'
+    end
   end
 
   # POST /tasks or /tasks.json
