@@ -1,13 +1,13 @@
-# Label.create!(name: '優先度高')
-# Label.create!(name: '優先度中')
-# Label.create!(name: '優先度低')
-# Label.create!(name: '本日中対応')
-# Label.create!(name: '後日調整可')
-# Label.create!(name: '要相談')
-# Label.create!(name: 'メールする')
-# Label.create!(name: '電話かける')
-# Label.create!(name: '日程調整')
-# Label.create!(name: '保留')
+Label.create!(name: '優先度高')
+Label.create!(name: '優先度中')
+Label.create!(name: '優先度低')
+Label.create!(name: '本日中対応')
+Label.create!(name: '後日調整可')
+Label.create!(name: '要相談')
+Label.create!(name: 'メールする')
+Label.create!(name: '電話かける')
+Label.create!(name: '日程調整')
+Label.create!(name: '保留')
 
 User.create!(
     name: 'test001',
@@ -41,7 +41,7 @@ User.create!(
 )
 
 Task.create!(
-    user_id: 3,
+    user_id: 1,
     assortment:'JOB',
     major_category: '新卒採用',
     medium_category: '23卒新卒採用',
@@ -54,7 +54,7 @@ Task.create!(
 )
 
 Task.create!(
-    user_id: 3,
+    user_id: 1,
     assortment:'JOB',
     major_category: '中途採用',
     medium_category: '山田さん選考',
@@ -67,7 +67,7 @@ Task.create!(
 )
 
 Task.create!(
-    user_id: 3,
+    user_id: 1,
     assortment:'JOB',
     major_category: '研修',
     medium_category: 'キャリアデザイン研修',
@@ -80,7 +80,7 @@ Task.create!(
 )
 
 Task.create!(
-    user_id: 3,
+    user_id: 1,
     assortment:'JOB',
     major_category: '採用',
     medium_category: '22卒新卒採用',
@@ -93,7 +93,7 @@ Task.create!(
 )
 
 Task.create!(
-    user_id: 3,
+    user_id: 1,
     assortment:'JOB',
     major_category: '研修',
     medium_category: '異文化コミュニケーション研修',
@@ -106,31 +106,31 @@ Task.create!(
 )
 
 Comment.create!(
-    task_id: 13,
-    user_id: 3,
+    task_id: 1,
+    user_id: 1,
     content: "資料着日確認"
 )
 
 Comment.create!(
-    task_id: 13,
-    user_id: 3,
+    task_id: 1,
+    user_id: 1,
     content: "18時以降なら電話可能"
 )
 
 Comment.create!(
-    task_id: 13,
-    user_id: 3,
+    task_id: 1,
+    user_id: 1,
     content: "研修終わる10分前に配信"
 )
 
 Comment.create!(
-    task_id: 13,
-    user_id: 3,
+    task_id: 1,
+    user_id: 1,
     content: "人数変更いつまで可能か確認"
 )
 
 Comment.create!(
-    task_id: 13,
-    user_id: 3,
+    task_id: 1,
+    user_id: 1,
     content: "名簿へ反映させる"
 )
