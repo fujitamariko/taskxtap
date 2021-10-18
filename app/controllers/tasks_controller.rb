@@ -35,8 +35,16 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.build(task_params)
-    @task.plan_hours += params[:plan_hours].to_f
-    @task.spend_hours += params[:spend_hours].to_f
+    if @task.plan_hours = nil
+      @task.plan_hours = 0
+    else
+      @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
+    end
+    if @task.spend_hours = nil
+      @task.spend_hours = 0
+    else
+      @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f
+    end
     if @task.save
       redirect_to tasks_path, notice: "タスクが登録されました"
     else
@@ -46,8 +54,16 @@ class TasksController < ApplicationController
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
-    # @task.plan_hours += params[:plan_hours].to_f
-    # @task.spend_hours += params[:spend_hours].to_f
+    if @task.plan_hours = nil
+      @task.plan_hours = 0
+    else
+      @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
+    end
+    if @task.spend_hours = nil
+      @task.spend_hours = 0
+    else
+      @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f
+    end
     if @task.update(task_params)
       redirect_to tasks_path, notice: "タスクが更新されました"
     else
