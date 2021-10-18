@@ -106,31 +106,31 @@
 # )
 
 Comment.create!(
-    task_id: 20,
+    task_id: 2,
     user_id: 1,
     content: "資料着日確認"
 )
 
 Comment.create!(
-    task_id: 21,
+    task_id: 3,
     user_id: 1,
     content: "18時以降なら電話可能"
 )
 
 Comment.create!(
-    task_id: 22,
+    task_id: 4,
     user_id: 2,
     content: "研修終わる10分前に配信"
 )
 
 Comment.create!(
-    task_id: 23,
+    task_id: 5,
     user_id: 2,
     content: "人数変更いつまで可能か確認"
 )
 
 Comment.create!(
-    task_id: 24,
+    task_id: 6,
     user_id: 1,
     content: "名簿へ反映させる"
 )
