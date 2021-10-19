@@ -10,7 +10,12 @@ class Task < ApplicationRecord
     validates_inclusion_of :spend_hours, in:0..999
     validates :deadline_on, presence: true
     validates :status, presence: true
-
+    validate :deadline_lastyear
+    def deadline_lastyear
+      unless deadline_on == nil
+        errors.add(:deadline_on, 'は、今日を含む1年以内の日付を入力して下さい') if deadline_on < Time.now.prev_year
+      end
+    end
 
     enum status: {未着手:0, 着手中:1, 完了:2}
     belongs_to :user

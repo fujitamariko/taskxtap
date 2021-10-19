@@ -12,10 +12,11 @@ ja:
         assortment: 種類
         major_category: 大分類
         medium_category: 中分類
-        sub_category: 中分類
+        sub_category: 小分類
         content: 内容
         plan_hours: 予定工数
         spend_hours: 実工数
+        deadline_on: 締め切り
   date:
     abbr_day_names:
     - 日
