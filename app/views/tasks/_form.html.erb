@@ -13,37 +13,37 @@
 
   <div class="field">
     <%= form.label :種類 %>
-    <%= form.text_field :assortment %>
+    <%= form.text_field :assortment, placeholder: '例)JOB' %>
   </div>
 
   <div class="field">
     <%= form.label :大分類 %>
-    <%= form.text_field :major_category %>
+    <%= form.text_field :major_category, placeholder: '例)採用' %>
   </div>
 
   <div class="field">
     <%= form.label :中分類 %>
-    <%= form.text_field :medium_category %>
+    <%= form.text_field :medium_category, placeholder: '例)23年度新卒採用' %>
   </div>
 
   <div class="field">
     <%= form.label :小分類 %>
-    <%= form.text_field :sub_category %>
+    <%= form.text_field :sub_category, placeholder: '例)埼玉大合説' %>
   </div>
 
   <div class="field">
     <%= form.label :内容 %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, placeholder: '例)資料送付' %>
   </div>
 
   <div class="field">
     <%= form.label :予定工数 %>
-    <%= form.number_field :plan_hours, step: "0.01" %>
+    <%= form.number_field :plan_hours, step: "0.01", placeholder: '例)0.5(30分の場合)' %>
   </div>
 
   <div class="field">
     <%= form.label :実工数 %>
-    <%= form.number_field :spend_hours, step: "0.01" %>
+    <%= form.number_field :spend_hours, step: "0.01", placeholder: '例)1.25(75分の場合)' %>
   </div>
 
   <div class="field">
