@@ -1,6 +1,6 @@
 <h1><%= @user.name %>のページ</h1>
 <p>メールアドレス: <%= @user.email %></p>
 
-<%= link_to 'ユーザー情報を編集する', edit_user_path(@user) %>
+<%= link_to 'ユーザー情報を編集する', edit_user_registration_path(@user) %>
 <%= link_to "ユーザーを削除する", @user, method: :delete, data: { confirm: '本当に削除しますか？' } %>
 <%= link_to "タスク一覧へ", tasks_path(@user.id) %>

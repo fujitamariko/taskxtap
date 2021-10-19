@@ -35,12 +35,12 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.build(task_params)
-    if @task.plan_hours = nil
+    if @task.plan_hours == nil
       @task.plan_hours = 0
     else
       @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
     end
-    if @task.spend_hours = nil
+    if @task.spend_hours == nil
       @task.spend_hours = 0
     else
       @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f
@@ -54,12 +54,12 @@ class TasksController < ApplicationController
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
-    if @task.plan_hours = nil
+    if @task.plan_hours == nil
       @task.plan_hours = 0
     else
       @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
     end
-    if @task.spend_hours = nil
+    if @task.spend_hours == nil
       @task.spend_hours = 0
     else
       @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f

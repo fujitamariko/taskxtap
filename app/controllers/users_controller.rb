@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :destroy]
+  before_action :authenticate_user!, only: [:show, :destroy]
 
     def show
         unless @user == current_user
@@ -8,16 +8,16 @@ class UsersController < ApplicationController
         end
     end
 
-    def edit
-    end
+    # def edit
+    # end
 
-    def update
-      if @user.update(user_params)
-        redirect_to tasks_path, notice: "ユーザー情報を編集しました！"
-      else
-        render :edit
-      end
-    end
+    # def update
+    #   if @user.update(user_params)
+    #     redirect_to tasks_path, notice: "ユーザー情報を編集しました！"
+    #   else
+    #     render :edit
+    #   end
+    # end
 
     def destroy
       @user.destroy
