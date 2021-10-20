@@ -59,3 +59,8 @@
     word-spacing:30px;
   }
 
+  footer p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
