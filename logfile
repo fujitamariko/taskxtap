@@ -14,3 +14,7 @@
 2021-10-19 16:00:28.329 JST [2559] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-10-19 16:00:28.368 JST [2560] LOG:  database system was shut down at 2021-10-19 15:55:05 JST
 2021-10-19 16:00:28.380 JST [2559] LOG:  database system is ready to accept connections
+2021-10-20 01:49:20.298 JST [2559] LOG:  received smart shutdown request
+2021-10-20 01:49:20.299 JST [2559] LOG:  background worker "logical replication launcher" (PID 2566) exited with exit code 1
+2021-10-20 01:49:20.299 JST [2561] LOG:  shutting down
+2021-10-20 01:49:20.316 JST [2559] LOG:  database system is shut down
