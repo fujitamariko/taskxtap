@@ -11,27 +11,43 @@
 
   <body>
     <header>
-      <% if user_signed_in? %>
-        <%= link_to "マイページ", "/users/#{current_user.id}" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        <% if current_user.try(:admin?) %>
-          <%= link_to "管理者専用", rails_admin_path %>
-        <% end %>
-      <% else %>
-        <%= link_to "新規登録", new_user_registration_path %>
-        <%= link_to "ログイン", new_user_session_path %>
-        <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
-        <%= link_to '管理者ゲストログイン（確認用）', users_guest_admin_sign_in_path, method: :post %>
-      <% end %>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand text-secondary" href="/">TxtTest1</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <% if user_signed_in? %>
+                <li><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                <% if current_user.try(:admin?) %>
+                  <li><%= link_to "管理者専用", rails_admin_path %></li>
+                <% end %>
+              <% else %>
+                <li><%= link_to "新規登録", new_user_registration_path %></li>
+                <li><%= link_to "ログイン", new_user_session_path %></li>
+                <li><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %></li>
+                <li><%= link_to '管理者ゲストログイン（確認用）', users_guest_admin_sign_in_path, method: :post %></li>
+              <% end %>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
-    <% if notice %>
-      <p class="alert alert-notice"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-error"><%= alert %></p>
-    <% end %>
-    <%= yield %>
+    <div class="main">
+      <div class="alert-space">
+        <% if notice %>
+          <p class="alert alert-notice"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-error"><%= alert %></p>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
 
     <footer>
       <h5>©Task × Tap 2021 Copyright</h5>
