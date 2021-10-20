@@ -6,14 +6,17 @@ class TasksController < ApplicationController
   def index
     @tasks = current_user.tasks.all.page(params[:page]).per(5)
     @q = @tasks.ransack(params[:q])
-    @tasks = @q.result.includes(:user).page(params[:page]).order("deadline_on asc").per(5)
-    @tasks = @tasks.joins(:labels).where(labels: { id: params[:label_id] }) if params[:label_id].present?
+    @tasks = @q.result.includes(:user).page(params[:page]).per(5)
+    @tasks = @tasks.order("deadline_on asc").per(5) if params[:sort_limit]
   end
 
   # GET /tasks/1 or /tasks/1.json
   def show
     @comments = @task.comments
     @comment = @task.comments.build
+    unless @task.user_id == current_user.id
+      redirect_to tasks_path, notice: '他の人のページへアクセスは出来ません'
+    end
   end
 
   # GET /tasks/new
@@ -23,28 +26,47 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    unless @task.user_id == current_user.id
+      redirect_to tasks_path, notice: '他の人のページへアクセスは出来ません'
+    end
   end
 
   # POST /tasks or /tasks.json
   def create
     @task = current_user.tasks.build(task_params)
+    if @task.plan_hours == nil
+      @task.plan_hours = 0
+    else
+      @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
+    end
+    if @task.spend_hours == nil
+      @task.spend_hours = 0
+    else
+      @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f
+    end
     if @task.save
       redirect_to tasks_path, notice: "タスクが登録されました"
     else
       render :new
     end
-end
+  end
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
-    respond_to do |format|
-      if @task.update(task_params)
-        format.html { redirect_to @task, notice: "タスクが更新されました" }
-        format.json { render :show, status: :ok, location: @task }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
+    if @task.plan_hours == nil
+      @task.plan_hours = 0
+    else
+      @task.plan_hours = @task.plan_hours.to_f + params[:plan_hours].to_f
+    end
+    if @task.spend_hours == nil
+      @task.spend_hours = 0
+    else
+      @task.spend_hours = @task.spend_hours.to_f + params[:spend_hours].to_f
+    end
+    if @task.update(task_params)
+      redirect_to tasks_path, notice: "タスクが更新されました"
+    else
+      render :edit
     end
   end
 
