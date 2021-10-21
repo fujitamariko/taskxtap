@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :内容 %>
-    <%= form.text_area :content, placeholder: '例)資料送付' %>
+    <%= form.text_field :content, placeholder: '例)資料送付' %>
   </div>
 
   <div class="field">
@@ -56,8 +56,8 @@
     <%= form.select :status, Task.statuses.keys.to_a, {}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :ラベル %>
+  <div class="checklabelstyle">
+    <%#= form.label :ラベル %>
     <%= form.collection_check_boxes(:label_ids, Label.all, :id, :name) %>
   </div>
 
