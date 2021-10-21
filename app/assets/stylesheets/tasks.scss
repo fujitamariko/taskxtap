@@ -49,8 +49,16 @@ td {
   text-align: left;
 }
 
-
 th,td {
   border: solid 1px;
   padding: 10px;
+}
+
+.btn-wrapper {
+  // display: block;
+  // flex-flow: column;
+  background-color: #32fa6e;
+  display: inline-flex;
+  flex-direction: column;
+
 }

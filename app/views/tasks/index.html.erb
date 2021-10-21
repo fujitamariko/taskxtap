@@ -35,9 +35,11 @@
             <%= label.name %>
           <% end %>
         </td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+
+        <td><%= link_to '詳細', task, class:"btn btn-primary mr-3" %><br>
+        <%= link_to '編集', edit_task_path(task), class: "btn btn-success mr-3" %><br>
+        <%= link_to '削除', task, method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger mr-3" %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -47,4 +49,4 @@
 <%= paginate @tasks %>
 <br>
 
-<%= link_to '新規タスク登録', new_task_path %>
+<%= link_to '新規タスク登録', new_task_path, class: "btn btn-dark mr-3" %>
