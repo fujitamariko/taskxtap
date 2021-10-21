@@ -15,15 +15,14 @@
  *= require_self
  */
 
-
-  body {
+body {
   background-color: #d0f5f7;
   color: #000000;
-  text-align:center;
+  text-align: center;
   margin: 33px;
-　}
+}
 
-  footer {
+footer {
   background-color: #9ef0f3;
   height: 30px;
   width: 100%;
@@ -32,9 +31,9 @@
   display: table;
   position: fixed;
   text-align: center;
-　}
+}
 
-  header {
+header {
   color: #484a4b;
   height: 30px;
   width: 100%;
@@ -43,28 +42,28 @@
   display: table;
   position: fixed;
   text-align: center;
-  z-index:1;
-  }
+  z-index: 1;
+}
 
-  header li {
-    margin-top: 5px;
-    margin-left: 35px;
-  }
+header li {
+  margin-top: 5px;
+  margin-left: 35px;
+}
 
-  .container-fluid {
-    background-color: #9ef0f3;
-  }
+.container-fluid {
+  background-color: #9ef0f3;
+}
 
-  .main {
-    padding-top: 40px;
-  }
+.main {
+  padding-top: 40px;
+}
 
-  .navbar-brand{
-    word-spacing:30px;
-  }
+.navbar-brand{
+  word-spacing: 30px;
+}
 
-  footer p {
-    display: table-cell;
-    vertical-align: middle;
-  }
+footer p {
+  display: table-cell;
+  vertical-align: middle;
+}
 
