@@ -56,11 +56,10 @@
   </div>
 
   <div class="checklabelstyle">
-    <%#= form.label :ラベル %>
     <%= form.collection_check_boxes(:label_ids, Label.all, :id, :name) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <input class="btn btn-primary" type="submit" value="送信ボタン">
   </div>
 <% end %>

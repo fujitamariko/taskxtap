@@ -37,7 +37,6 @@ table {
   margin: 0 auto;
   margin-top: 40px;
   border-collapse:  collapse;
-  
 }
 
 th {
@@ -52,13 +51,4 @@ td {
 th,td {
   border: solid 1px;
   padding: 10px;
-}
-
-.btn-wrapper {
-  // display: block;
-  // flex-flow: column;
-  background-color: #32fa6e;
-  display: inline-flex;
-  flex-direction: column;
-
 }

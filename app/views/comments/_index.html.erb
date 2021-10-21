@@ -5,12 +5,12 @@
       <!-- 追記 -->
         <div class="comment-content" id ="this_comment_<%= comment.id %>"></div>
       <!-- ここまで -->
-        <p><%= comment.content %></p>
+        <p class="commentstyle"><%= comment.content %></p>
         <!-- 追記 -->
-        <p><%= link_to "コメント編集", edit_task_comment_path(task, comment), remote: true %></p>
+        <p class="commentstyle"><%= link_to "コメント編集", edit_task_comment_path(task, comment), remote: true, class: "btn btn-success btn-xs" %></p>
         <!-- ここまで -->
-        <p><%= link_to "コメント削除", task_comment_path(comment.task_id, comment.id), method: :delete, remote: true,
-                                      data: { confirm: "本当に削除しますか?"} %></p>
+        <p class="commentstyle"><%= link_to "コメント削除", task_comment_path(comment.task_id, comment.id), method: :delete, remote: true,
+                                      data: { confirm: "本当に削除しますか?"}, class: "btn btn-danger btn-xs" %></p>
       </li>
     <% end %>
   <% end %>
