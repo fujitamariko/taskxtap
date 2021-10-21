@@ -1,3 +1,64 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+label {
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 25px;
+  text-align: center;
+  width: 80px;
+}
+
+.checklabelstyle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.form-control {
+  width: 150px;
+  height: 40px;
+  text-align: left;
+  margin: 0 auto;
+  margin-right: 15px;
+}
+
+select {
+  width: 150px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+table {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-collapse:  collapse;
+  
+}
+
+th {
+  background-color: #f7f200;
+  text-align:  center;
+}
+
+td {
+  text-align: left;
+}
+
+th,td {
+  border: solid 1px;
+  padding: 10px;
+}
+
+.btn-wrapper {
+  // display: block;
+  // flex-flow: column;
+  background-color: #32fa6e;
+  display: inline-flex;
+  flex-direction: column;
+
+}
