@@ -18,7 +18,9 @@
 
   body {
   background-color: #d0f5f7;
+  color: #000000;
   text-align:center;
+  margin: 33px;
 　}
 
   footer {
@@ -33,6 +35,7 @@
 　}
 
   header {
+  color: #484a4b;
   height: 30px;
   width: 100%;
   left: 0;
