@@ -5,7 +5,7 @@
       <!-- 追記 -->
         <div class="comment-content" id ="this_comment_<%= comment.id %>"></div>
       <!-- ここまで -->
-        <p class="commentstyle"><%= comment.content %></p>
+        <p><%= comment.content %></p>
         <!-- 追記 -->
         <p class="commentstyle"><%= link_to "コメント編集", edit_task_comment_path(task, comment), remote: true, class: "btn btn-success btn-xs" %></p>
         <!-- ここまで -->
