@@ -30,3 +30,27 @@ select {
   height: 40px;
   margin-right: 15px;
 }
+
+table {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-collapse:  collapse;
+  
+}
+
+th {
+  background-color: #f7f200;
+  text-align:  center;
+}
+
+td {
+  text-align: left;
+}
+
+
+th,td {
+  border: solid 1px;
+  padding: 10px;
+}
