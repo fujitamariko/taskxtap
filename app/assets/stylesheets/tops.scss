@@ -2,18 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.card {
-  display: block;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+div {
+  position: relative;
 }
 
-.card-img-overlay {
-  padding: 0;
-  top: calc(25% - 1.5rem);
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  font-weight: bold;
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6b6b6b;
+  font-size: 1.3em;
+  font-weight: 600;
+  top: 40%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+img {
+  width: 700px;
+  margin-top: 40px;
 }
