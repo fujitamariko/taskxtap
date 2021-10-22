@@ -6,24 +6,14 @@ RSpec.describe 'ユーザー機能', type: :system do
       it 'ユーザーの新規登録ができること' do
       visit new_user_registration_path
       fill_in 'user[name]', with: 'new_user'
-      fill_in 'user[email]', with: 'new@gmail.com'
-      fill_in 'user[specification]', with: 'newuser0'
-      fill_in 'user[birthday]', with: '002010-01-01'
-      fill_in 'user[password]', with: 'newuser'
-      fill_in 'user[password_confirmation]', with: 'newuser'
+      fill_in 'user[email]', with: 'new@email.com'
+      fill_in 'user[password]', with: 'password'
+      fill_in 'user[password_confirmation]', with: 'password'
       click_button 'アカウント登録'
-      expect(page).to have_content 'new_user'
-      end
-    end
-    context 'ユーザーがログインしていない場合' do
-      it 'グループ作成画面に飛ぼうとした時、ログイン画面に推移すること' do
-      visit new_group_path
-      expect(page).to have_content 'ログイン'
+      expect(page).to have_content 'アカウント登録が完了しました'
       end
     end
   end
-
-
 
   describe 'ログイン機能のテスト' do
     context '登録済のユーザーがログイン画面で正しい入力をした場合' do
@@ -32,10 +22,10 @@ RSpec.describe 'ユーザー機能', type: :system do
       end
       it 'ログインに成功し、マイページに遷移すること' do
         visit new_user_session_path
-        fill_in 'user[email]', with: 'user1@gmail.com'
+        fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'
         click_button 'ログイン'
-        expect(page).to have_content 'マイページ'
+        expect(page).to have_content 'ログインしました'
       end
     end
     context 'ユーザーがログインしている場合' do
@@ -43,17 +33,19 @@ RSpec.describe 'ユーザー機能', type: :system do
         @user1 = FactoryBot.create(:user1)
         @user2 = FactoryBot.create(:user2)
         visit new_user_session_path
-        fill_in 'user[email]', with: 'user1@gmail.com'
+        fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'
         click_button 'ログイン'
       end
       it 'ログアウトができること' do
+        # ヘッダーのハンバーガーボタンをさす
+        find('.navbar-toggle').native.click
         click_link 'ログアウト'
         expect(page).to have_content 'ログアウトしました'
       end
       it '他人のマイページに飛ぼうとすると、自分のマイページに遷移すること' do
         visit user_path(@user2)
-        expect(page).to have_content 'user1'
+        expect(page).to have_content '他の人のページへアクセスは出来ません'
       end
     end
   end
@@ -63,16 +55,19 @@ RSpec.describe 'ユーザー機能', type: :system do
       before do
         @user1 = FactoryBot.create(:user1)
         visit new_user_session_path
-        fill_in 'user[email]', with: 'user1@gmail.com'
+        fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'
         click_button 'ログイン'
       end
       it 'ユーザー情報の編集・更新ができ、マイページへ遷移すること' do
-        click_link 'ユーザー編集'
-        fill_in 'user[name]', with: 'user_edit'
+        # ヘッダーのハンバーガーボタンをさす
+        find('.navbar-toggle').native.click
+        click_link 'マイページ'
+        click_link 'ユーザー情報を編集する'
+        fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[current_password]', with: 'password'
         click_on '更新'
-        expect(page).to have_content 'user_editのマイページ'
+        expect(page).to have_content 'アカウント情報を変更しました'
       end
     end
   end
@@ -82,15 +77,17 @@ RSpec.describe 'ユーザー機能', type: :system do
       before do
         @user1 = FactoryBot.create(:user1)
         visit new_user_session_path
-        fill_in 'user[email]', with: 'user1@gmail.com'
+        fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'
         click_button 'ログイン'
       end
       it 'アカウントが削除できること' do
-        click_link 'ユーザー編集'
-        click_on 'アカウント削除'
+        # ヘッダーのハンバーガーボタンをさす
+        find('.navbar-toggle').native.click
+        click_link 'マイページ'
+        click_on 'ユーザーを削除する'
         page.driver.browser.switch_to.alert.accept
-        expect(page).to have_content 'アカウントを削除しました'
+        expect(page).to have_content 'ユーザーを削除しました'
       end
     end
   end
@@ -99,15 +96,19 @@ RSpec.describe 'ユーザー機能', type: :system do
     context '管理者ゲストログインをした場合' do
       it 'ログインができ、マイページに遷移する' do
         visit root_path
-        click_link '管理者ゲストログイン'
-        expect(page).to have_content '管理者ゲストのマイページ'
+        # ヘッダーのハンバーガーボタンをさす
+        find('.navbar-toggle').native.click
+        click_link '管理者ゲストログイン（確認用）'
+        expect(page).to have_content '管理者ゲストユーザーとしてログインしました'
       end
     end
     context 'ゲストログインをした場合' do
       it 'ログインができ、マイページに遷移する' do
         visit root_path
-        click_on 'ゲストログイン'
-        expect(page).to have_content 'ゲストのマイページ'
+        # ヘッダーのハンバーガーボタンをさす
+        find('.navbar-toggle').native.click
+        click_on 'ゲストログイン（閲覧用）'
+        expect(page).to have_content 'ゲストユーザーとしてログインしました'
       end
     end
   end
