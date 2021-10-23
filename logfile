@@ -50,3 +50,23 @@
 2021-10-22 20:47:29.496 JST [2016] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-10-22 20:47:29.553 JST [2017] LOG:  database system was shut down at 2021-10-22 20:30:59 JST
 2021-10-22 20:47:29.570 JST [2016] LOG:  database system is ready to accept connections
+2021-10-23 02:42:45.546 JST [2016] LOG:  received smart shutdown request
+2021-10-23 02:42:45.547 JST [2016] LOG:  background worker "logical replication launcher" (PID 2023) exited with exit code 1
+2021-10-23 02:42:45.548 JST [2018] LOG:  shutting down
+2021-10-23 02:42:45.560 JST [2016] LOG:  database system is shut down
+2021-10-23 07:01:08.612 JST [2276] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-23 07:01:08.618 JST [2276] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-23 07:01:08.618 JST [2276] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-23 07:01:08.619 JST [2276] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-23 07:01:08.672 JST [2277] LOG:  database system was shut down at 2021-10-23 02:42:45 JST
+2021-10-23 07:01:08.688 JST [2276] LOG:  database system is ready to accept connections
+2021-10-23 07:57:38.114 JST [2276] LOG:  received smart shutdown request
+2021-10-23 07:57:38.115 JST [2276] LOG:  background worker "logical replication launcher" (PID 2283) exited with exit code 1
+2021-10-23 07:57:38.115 JST [2278] LOG:  shutting down
+2021-10-23 07:57:38.123 JST [2276] LOG:  database system is shut down
+2021-10-23 08:03:33.349 JST [1981] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-23 08:03:33.352 JST [1981] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-23 08:03:33.352 JST [1981] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-23 08:03:33.353 JST [1981] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-23 08:03:33.393 JST [1982] LOG:  database system was shut down at 2021-10-23 07:57:38 JST
+2021-10-23 08:03:33.406 JST [1981] LOG:  database system is ready to accept connections

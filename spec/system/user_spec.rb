@@ -18,7 +18,7 @@ RSpec.describe 'ユーザー機能', type: :system do
   describe 'ログイン機能のテスト' do
     context '登録済のユーザーがログイン画面で正しい入力をした場合' do
       before do
-        FactoryBot.create(:user1)
+        FactoryBot.create(:user)
       end
       it 'ログインに成功し、マイページに遷移すること' do
         visit new_user_session_path
@@ -30,7 +30,7 @@ RSpec.describe 'ユーザー機能', type: :system do
     end
     context 'ユーザーがログインしている場合' do
       before do
-        @user1 = FactoryBot.create(:user1)
+        @user = FactoryBot.create(:user)
         @user2 = FactoryBot.create(:user2)
         visit new_user_session_path
         fill_in 'user[email]', with: 'user1@email.com'
@@ -53,7 +53,7 @@ RSpec.describe 'ユーザー機能', type: :system do
   describe 'ユーザー編集機能' do
     context 'ユーザーが編集操作をした場合' do
       before do
-        @user1 = FactoryBot.create(:user1)
+        @user = FactoryBot.create(:user)
         visit new_user_session_path
         fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'
@@ -75,7 +75,7 @@ RSpec.describe 'ユーザー機能', type: :system do
   describe 'ユーザー削除機能' do
     context 'ユーザーがアカウント削除操作をした場合' do
       before do
-        @user1 = FactoryBot.create(:user1)
+        @user = FactoryBot.create(:user)
         visit new_user_session_path
         fill_in 'user[email]', with: 'user1@email.com'
         fill_in 'user[password]', with: 'password'

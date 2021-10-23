@@ -9,7 +9,6 @@ FactoryBot.define do
     spend_hours { '111' }
     deadline_on { '2021/10/22' }
     status { '完了' }
-    user { nil }
   end
 
   factory :task2, class: Task do
@@ -22,6 +21,6 @@ FactoryBot.define do
     spend_hours { '245.2' }
     deadline_on { '2021/12/09' }
     status { '完了' }
-    user { nil }
+    # user { nil }
   end
 end

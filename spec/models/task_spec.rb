@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Taskモデル機能', type: :model do
   describe 'バリデーションのテスト' do
     before do
-      @user = FactoryBot.create(:user1)
+      @user = FactoryBot.create(:user)
     end
 
     context '種類が空の場合' do

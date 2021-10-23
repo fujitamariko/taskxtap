@@ -1,7 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'タスク管理機能', type: :system do
-    let!(:user) { FactoryBot.create(:user1) }
-    let!(:admin_user) { FactoryBot.create(:admin_user) }
+    let!(:user) { FactoryBot.create(:user) }
     let!(:task1) { FactoryBot.create(:task1, user: user) }
     let!(:task2) { FactoryBot.create(:task2, user: user) }
 
