@@ -41,6 +41,7 @@ RSpec.describe 'ユーザー機能', type: :system do
         # ヘッダーのハンバーガーボタンをさす
         find('.navbar-toggle').native.click
         click_link 'ログアウト'
+        binding.irb
         expect(page).to have_content 'ログアウトしました'
       end
       it '他人のマイページに飛ぼうとすると、自分のマイページに遷移すること' do
