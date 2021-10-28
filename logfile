@@ -70,3 +70,69 @@
 2021-10-23 08:03:33.353 JST [1981] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-10-23 08:03:33.393 JST [1982] LOG:  database system was shut down at 2021-10-23 07:57:38 JST
 2021-10-23 08:03:33.406 JST [1981] LOG:  database system is ready to accept connections
+2021-10-23 16:19:44.721 JST [2731] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-23 16:19:44.725 JST [2731] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-23 16:19:44.725 JST [2731] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-23 16:19:44.726 JST [2731] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-23 16:19:44.775 JST [2732] LOG:  database system was shut down at 2021-10-23 09:58:26 JST
+2021-10-23 16:19:44.784 JST [2731] LOG:  database system is ready to accept connections
+2021-10-23 22:18:02.839 JST [2731] LOG:  received smart shutdown request
+2021-10-23 22:18:02.840 JST [2731] LOG:  background worker "logical replication launcher" (PID 2738) exited with exit code 1
+2021-10-23 22:18:02.841 JST [2733] LOG:  shutting down
+2021-10-23 22:18:02.855 JST [2731] LOG:  database system is shut down
+2021-10-24 17:25:04.246 JST [2040] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-24 17:25:04.250 JST [2040] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-24 17:25:04.250 JST [2040] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-24 17:25:04.252 JST [2040] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-24 17:25:04.305 JST [2041] LOG:  database system was shut down at 2021-10-23 22:18:02 JST
+2021-10-24 17:25:04.320 JST [2040] LOG:  database system is ready to accept connections
+2021-10-24 19:18:28.237 JST [2040] LOG:  received smart shutdown request
+2021-10-24 19:18:28.239 JST [2040] LOG:  background worker "logical replication launcher" (PID 2047) exited with exit code 1
+2021-10-24 19:18:28.239 JST [2042] LOG:  shutting down
+2021-10-24 19:18:28.257 JST [2040] LOG:  database system is shut down
+2021-10-24 21:04:50.838 JST [2541] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-24 21:04:50.841 JST [2541] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-24 21:04:50.841 JST [2541] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-24 21:04:50.842 JST [2541] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-24 21:04:50.883 JST [2542] LOG:  database system was shut down at 2021-10-24 19:18:28 JST
+2021-10-24 21:04:50.895 JST [2541] LOG:  database system is ready to accept connections
+2021-10-25 05:30:58.162 JST [2541] LOG:  received smart shutdown request
+2021-10-25 05:30:58.165 JST [2541] LOG:  background worker "logical replication launcher" (PID 2548) exited with exit code 1
+2021-10-25 05:30:58.166 JST [2543] LOG:  shutting down
+2021-10-25 05:30:58.180 JST [2541] LOG:  database system is shut down
+2021-10-25 10:04:41.837 JST [2479] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-25 10:04:41.841 JST [2479] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-25 10:04:41.841 JST [2479] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-25 10:04:41.842 JST [2479] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-25 10:04:41.886 JST [2480] LOG:  database system was shut down at 2021-10-25 05:30:58 JST
+2021-10-25 10:04:41.896 JST [2479] LOG:  database system is ready to accept connections
+2021-10-25 19:10:02.412 JST [2479] LOG:  received smart shutdown request
+2021-10-25 19:10:02.413 JST [2479] LOG:  background worker "logical replication launcher" (PID 2486) exited with exit code 1
+2021-10-25 19:10:02.413 JST [2481] LOG:  shutting down
+2021-10-25 19:10:02.424 JST [2479] LOG:  database system is shut down
+2021-10-27 10:43:54.415 JST [2663] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-27 10:43:54.419 JST [2663] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-27 10:43:54.419 JST [2663] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-27 10:43:54.420 JST [2663] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-27 10:43:54.468 JST [2664] LOG:  database system was shut down at 2021-10-25 19:10:02 JST
+2021-10-27 10:43:54.485 JST [2663] LOG:  database system is ready to accept connections
+2021-10-27 11:53:34.868 JST [2663] LOG:  received smart shutdown request
+2021-10-27 11:53:34.870 JST [2663] LOG:  background worker "logical replication launcher" (PID 2670) exited with exit code 1
+2021-10-27 11:53:34.870 JST [2665] LOG:  shutting down
+2021-10-27 11:53:34.882 JST [2663] LOG:  database system is shut down
+2021-10-27 15:09:59.804 JST [2122] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-27 15:09:59.807 JST [2122] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-27 15:09:59.807 JST [2122] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-27 15:09:59.809 JST [2122] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-27 15:09:59.854 JST [2123] LOG:  database system was shut down at 2021-10-27 11:53:34 JST
+2021-10-27 15:09:59.865 JST [2122] LOG:  database system is ready to accept connections
+2021-10-27 23:21:39.533 JST [2122] LOG:  received smart shutdown request
+2021-10-27 23:21:39.534 JST [2122] LOG:  background worker "logical replication launcher" (PID 2129) exited with exit code 1
+2021-10-27 23:21:39.535 JST [2124] LOG:  shutting down
+2021-10-27 23:21:39.552 JST [2122] LOG:  database system is shut down
+2021-10-28 16:36:50.179 JST [6673] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-28 16:36:50.183 JST [6673] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-28 16:36:50.183 JST [6673] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-28 16:36:50.185 JST [6673] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-28 16:36:50.234 JST [6674] LOG:  database system was shut down at 2021-10-27 23:21:39 JST
+2021-10-28 16:36:50.246 JST [6673] LOG:  database system is ready to accept connections

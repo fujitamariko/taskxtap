@@ -1,6 +1,7 @@
 require 'rails_helper'
 RSpec.describe 'タスク管理機能', type: :system do
     let!(:user) { FactoryBot.create(:user) }
+    let!(:user2) { FactoryBot.create(:user2) }
     let!(:task1) { FactoryBot.create(:task1, user: user) }
     let!(:task2) { FactoryBot.create(:task2, user: user) }
 
@@ -125,4 +126,26 @@ RSpec.describe 'タスク管理機能', type: :system do
       end
     end
   end
+
+  describe 'アクセス制限のテスト' do
+    before do
+        visit new_user_session_path
+        fill_in 'user[email]', with: 'user2@email.com'
+        fill_in 'user[password]', with: 'password'
+        click_button 'ログイン'
+    end
+    context '他人のタスク詳細画面に遷移した場合' do
+      it 'アクセス制限がかかり遷移することができない' do
+        visit task_path(task1.id)
+        expect(page).to have_content '他の人のページへアクセスは出来ません'
+      end
+    end
+    context '他人のタスク編集画面に遷移した場合' do
+      it 'アクセス制限がかかり遷移することができない' do
+        visit edit_task_path(task1.id)
+        expect(page).to have_content '他の人のページへアクセスは出来ません'
+      end
+    end
+  end
+
 end

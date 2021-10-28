@@ -21,6 +21,5 @@ FactoryBot.define do
     spend_hours { '245.2' }
     deadline_on { '2021/12/09' }
     status { '完了' }
-    # user { nil }
   end
 end
