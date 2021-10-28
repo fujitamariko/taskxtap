@@ -40,10 +40,12 @@
     <%= form.number_field :plan_hours, step: "0.01", placeholder: '例)0.5(30分の場合)' %>
   </div>
 
-  <div class="field">
-    <%= form.label :実工数 %>
-    <%= form.number_field :spend_hours, step: "0.01", placeholder: '例)1.25(75分の場合)' %>
-  </div>
+  <% if controller.action_name == "edit" %>
+    <div class="field">
+      <%= form.label :実工数 %>
+      <%= form.number_field :spend_hours, step: "0.01", placeholder: '例)1.25(75分の場合)' %>
+      </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :締め切り %>
