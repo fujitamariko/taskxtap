@@ -136,3 +136,9 @@
 2021-10-28 16:36:50.185 JST [6673] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-10-28 16:36:50.234 JST [6674] LOG:  database system was shut down at 2021-10-27 23:21:39 JST
 2021-10-28 16:36:50.246 JST [6673] LOG:  database system is ready to accept connections
+2021-11-02 14:16:47.694 JST [3388] LOG:  starting PostgreSQL 14.0 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-11-02 14:16:47.697 JST [3388] LOG:  listening on IPv6 address "::1", port 5432
+2021-11-02 14:16:47.697 JST [3388] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-11-02 14:16:47.697 JST [3388] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-11-02 14:16:47.729 JST [3389] LOG:  database system was shut down at 2021-10-28 19:30:31 JST
+2021-11-02 14:16:47.742 JST [3388] LOG:  database system is ready to accept connections

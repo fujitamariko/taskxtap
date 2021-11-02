@@ -4,7 +4,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = current_user.tasks.all.order('created_at desc').page(params[:page]).per(5)
+    @tasks = current_user.tasks.all.page(params[:page]).per(5)
     @q = @tasks.ransack(params[:q])
     @tasks = @q.result.includes(:user).page(params[:page]).per(5)
     @tasks = @tasks.order("deadline_on asc").per(5) if params[:sort_limit]
